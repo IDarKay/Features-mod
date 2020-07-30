@@ -1,0 +1,20 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "fr.idarkay.morefeature.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+  ],
+  "client": [
+    "HandledScreenMixin",
+    "InGameHudMixin",
+    "InGameOverlayRendererMixin",
+    "BackgroundRendererMixin",
+    "OptionScreenMixin",
+    "ClientPlayerInteractionManagerMixin",
+    "MinecraftClientMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

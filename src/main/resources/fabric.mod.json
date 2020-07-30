@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "more_feature_id",
+  "version": "${version}",
+
+  "name": "MoreFeature",
+  "description": "This is an example description! Tell everyone what your mod is about!",
+  "authors": [
+    "IDarKay"
+  ],
+  "contact": {
+    "homepage": "no",
+    "sources": "no"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/more_feature_id/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "fr.idarkay.morefeature.FeaturesClient"
+    ]
+  },
+  "mixins": [
+    "more_feature_id.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.16.x"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}
