@@ -30,7 +30,7 @@ public class FeaturesOptionsScreen extends Screen
 
     public FeaturesOptionsScreen(@Nullable Screen parent, FeaturesGameOptions featuresGameOptions)
     {
-        super(new TranslatableText("features.title"));
+        super(new TranslatableText("features.more_feature_id.title"));
         this.parent = parent;
         this.option = featuresGameOptions;
     }

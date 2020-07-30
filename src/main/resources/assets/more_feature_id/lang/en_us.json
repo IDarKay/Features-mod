@@ -1,9 +1,9 @@
 {
   "key.more_feature_id.options": "Open features option screen",
-  "features.title": "Features",
-  "options.breakSafe":"Break Safe: ",
-  "options.fireEffect":"Hide fire effect: ",
-  "options.hidePumpkin":"Hide head pumpkin effect: ",
-  "options.potionTime":"Show time below effect: ",
-  "options.removeLavaFog":"Remove lava fog:  "
+  "features.more_feature_id.title": "Features",
+  "options.more_feature_id.breakSafe":"Break Safe: ",
+  "options.more_feature_id.fireEffect":"Hide fire effect: ",
+  "options.more_feature_id.hidePumpkin":"Hide head pumpkin effect: ",
+  "options.more_feature_id.potionTime":"Show time below effect: ",
+  "options.more_feature_id.removeLavaFog":"Remove lava fog:  "
 }

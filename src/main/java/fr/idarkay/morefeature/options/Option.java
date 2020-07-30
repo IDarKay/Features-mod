@@ -23,27 +23,27 @@ public abstract class Option
 {
 
     public static final BooleanOption BREAK_SAFE = new BooleanOption(
-            new TranslatableText("options.breakSafe"),
+            new TranslatableText("options.more_feature_id.breakSafe"),
             options -> options.breakSafe,
             (options, aBoolean) -> options.breakSafe = aBoolean
     );
     public static final BooleanOption HIDE_FIRE = new BooleanOption(
-            new TranslatableText("options.fireEffect"),
+            new TranslatableText("options.more_feature_id.fireEffect"),
             options -> options.hide_fire,
             (options, aBoolean) -> options.hide_fire = aBoolean
     );
     public static final BooleanOption HIDE_PUMPKIN = new BooleanOption(
-            new TranslatableText("options.hidePumpkin"),
+            new TranslatableText("options.more_feature_id.hidePumpkin"),
             options -> options.hide_pumpkin,
             (options, aBoolean) -> options.hide_pumpkin = aBoolean
     );
     public static final BooleanOption SHOW_EFFECT_TIME = new BooleanOption(
-            new TranslatableText("options.potionTime"),
+            new TranslatableText("options.more_feature_id.potionTime"),
             options -> options.effect_time,
             (options, aBoolean) -> options.effect_time = aBoolean
     );
     public static final DoubleOption SMOG_LAVA = new DoubleOption(
-            new TranslatableText("Remove lava fog:  "),
+            new TranslatableText("options.more_feature_id.removeLavaFog"),
             0.0d, 1.0d, 0.0f,
             options -> options.lavaSmogRemover,
             (options, aDouble) -> options.lavaSmogRemover = aDouble,
