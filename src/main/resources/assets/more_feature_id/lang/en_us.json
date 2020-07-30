@@ -1,0 +1,9 @@
+{
+  "key.more_feature_id.options": "Open features option screen",
+  "features.title": "Features",
+  "options.breakSafe":"Break Safe: ",
+  "options.fireEffect":"Hide fire effect: ",
+  "options.hidePumpkin":"Hide head pumpkin effect: ",
+  "options.potionTime":"Show time below effect: ",
+  "options.removeLavaFog":"Remove lava fog:  "
+}

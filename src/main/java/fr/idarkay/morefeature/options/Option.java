@@ -6,6 +6,7 @@ import net.minecraft.client.gui.screen.ScreenTexts;
 import net.minecraft.client.gui.widget.AbstractButtonWidget;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.MutableText;
+import net.minecraft.text.TranslatableText;
 
 /**
  * File <b>Option</b> located on fr.idarkay.morefeature.options
@@ -22,27 +23,27 @@ public abstract class Option
 {
 
     public static final BooleanOption BREAK_SAFE = new BooleanOption(
-            new LiteralText("Break Safe: "),
+            new TranslatableText("options.breakSafe"),
             options -> options.breakSafe,
             (options, aBoolean) -> options.breakSafe = aBoolean
     );
     public static final BooleanOption HIDE_FIRE = new BooleanOption(
-            new LiteralText("Hide fire effect: "),
+            new TranslatableText("options.fireEffect"),
             options -> options.hide_fire,
             (options, aBoolean) -> options.hide_fire = aBoolean
     );
     public static final BooleanOption HIDE_PUMPKIN = new BooleanOption(
-            new LiteralText("Hide head pumpkin effect: "),
+            new TranslatableText("options.hidePumpkin"),
             options -> options.hide_pumpkin,
             (options, aBoolean) -> options.hide_pumpkin = aBoolean
     );
     public static final BooleanOption SHOW_EFFECT_TIME = new BooleanOption(
-            new LiteralText("Show time below effect: "),
+            new TranslatableText("options.potionTime"),
             options -> options.effect_time,
             (options, aBoolean) -> options.effect_time = aBoolean
     );
     public static final DoubleOption SMOG_LAVA = new DoubleOption(
-            new LiteralText("Remove lava fog: "),
+            new TranslatableText("Remove lava fog:  "),
             0.0d, 1.0d, 0.0f,
             options -> options.lavaSmogRemover,
             (options, aDouble) -> options.lavaSmogRemover = aDouble,

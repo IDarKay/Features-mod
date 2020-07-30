@@ -8,6 +8,7 @@ import net.minecraft.client.gui.screen.ScreenTexts;
 import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.text.LiteralText;
+import net.minecraft.text.TranslatableText;
 import org.jetbrains.annotations.Nullable;
 
 /**
@@ -29,7 +30,7 @@ public class FeaturesOptionsScreen extends Screen
 
     public FeaturesOptionsScreen(@Nullable Screen parent, FeaturesGameOptions featuresGameOptions)
     {
-        super(new LiteralText("Features"));
+        super(new TranslatableText("features.title"));
         this.parent = parent;
         this.option = featuresGameOptions;
     }
