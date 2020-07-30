@@ -33,7 +33,7 @@ This mod made by IDarKay
     - maj + drag for quick move many item in inventory
     
 
-## Installation <a name = "instaltion"></a>
+## 🛠️ Installation <a name = "instaltion"></a>
      
 Download file in <a href = "https://github.com/IDarKay/Features-mod/releases"> Release </a> the <a href = "https://github.com/IDarKay/Features-mod/releases/download/1.0.2/features-mod-1.0.2.jar"> jar</a>  and add 
 in mods folder with <a href= "https://www.curseforge.com/minecraft/mc-mods/fabric-api"> fabric-api </a>.
