@@ -1,4 +1,4 @@
-package fr.idarkay.morefeature.options;
+package fr.idarkay.morefeatures.options;
 
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
@@ -28,9 +28,10 @@ public class FeaturesGameOptions
 
     public double lavaSmogRemover = 0.0d;
     public boolean breakSafe = true;
-    public boolean hide_fire = false;
-    public boolean hide_pumpkin = false;
-    public boolean effect_time = true;
+    public boolean hideFire = false;
+    public boolean hidePumpkin = false;
+    public boolean effectTime = true;
+    public boolean localTime = false;
 
     private File saveFile;
 

@@ -1,7 +1,7 @@
-package fr.idarkay.morefeature.mixin;
+package fr.idarkay.morefeatures.mixin;
 
-import fr.idarkay.morefeature.FeaturesClient;
-import fr.idarkay.morefeature.options.FeaturesOptionsScreen;
+import fr.idarkay.morefeatures.FeaturesClient;
+import fr.idarkay.morefeatures.options.FeaturesOptionsScreen;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.options.OptionsScreen;
 import net.minecraft.client.gui.widget.ButtonWidget;

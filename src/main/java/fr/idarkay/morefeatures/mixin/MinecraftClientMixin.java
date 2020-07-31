@@ -1,6 +1,6 @@
-package fr.idarkay.morefeature.mixin;
+package fr.idarkay.morefeatures.mixin;
 
-import fr.idarkay.morefeature.FeaturesClient;
+import fr.idarkay.morefeatures.FeaturesClient;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.item.ItemStack;

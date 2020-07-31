@@ -1,4 +1,4 @@
-package fr.idarkay.morefeature.mixin;
+package fr.idarkay.morefeatures.mixin;
 
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.ingame.HandledScreen;
@@ -12,6 +12,7 @@ import net.minecraft.text.Text;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -45,12 +46,17 @@ public abstract class HandledScreenMixin<T extends ScreenHandler> extends Screen
         super(title);
     }
 
-    @Inject(method = "keyPressed(III)Z", at = @At("HEAD"), cancellable = true)
-    private void keyPressed(int keyCode, int scanCode, int modifiers, CallbackInfoReturnable<Boolean> cir) {
+    /**
+     * @author IDarKay
+     * @reason to add ctrl + shift + drop
+     */
+    @Overwrite
+    public boolean keyPressed(int keyCode, int scanCode, int modifiers) {
         if (super.keyPressed(keyCode, scanCode, modifiers))
         {
-            cir.setReturnValue(true);
-        } else if (keyCode != 256 && !this.client.options.keyInventory.matchesKey(keyCode, scanCode))
+            return true;
+        }
+        else if (keyCode != 256 && !this.client.options.keyInventory.matchesKey(keyCode, scanCode))
         {
             this.handleHotbarKeyPressed(keyCode, scanCode);
             if (this.focusedSlot != null && this.focusedSlot.hasStack())
@@ -78,13 +84,12 @@ public abstract class HandledScreenMixin<T extends ScreenHandler> extends Screen
                     else this.onMouseClick(this.focusedSlot, this.focusedSlot.id, control ? 1 : 0, SlotActionType.THROW);
                 }
             }
-            cir.setReturnValue(true);
+            return true;
         } else {
             this.client.player.closeHandledScreen();
-            cir.setReturnValue(true);
+            return true;
         }
     }
-
 
     @Inject(method = "mouseDragged(DDIDD)Z", at = @At("TAIL"))
     public void mouseDragged(double mouseX, double mouseY, int button, double deltaX, double deltaY, CallbackInfoReturnable<Boolean> cir)

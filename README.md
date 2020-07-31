@@ -23,6 +23,7 @@ by IDarKay
 
 This mod made by IDarKay
 ####Functionalities: 
+    - Edit Loccal Time (for timelaps)
     - Break Safe
     - lava fog remover
     - fire effect remover
@@ -34,7 +35,7 @@ This mod made by IDarKay
 
 ## 🛠️ Installation <a name = "instaltion"></a>
      
-Download file in <a href = "https://github.com/IDarKay/Features-mod/releases"> Release </a> the <a href = "https://github.com/IDarKay/Features-mod/releases/download/1.0.2/features-mod-1.0.2.jar"> jar</a>  and add this
+Download file in <a href = "https://github.com/IDarKay/Features-mod/releases/latest"> Release </a> the jat  and add this
 in mods folder with <a href= "https://www.curseforge.com/minecraft/mc-mods/fabric-api"> fabric-api </a>.
 
 Don't forget install fabric loader 

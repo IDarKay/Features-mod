@@ -1,11 +1,10 @@
-package fr.idarkay.morefeature.mixin;
+package fr.idarkay.morefeatures.mixin;
 
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.mojang.blaze3d.systems.RenderSystem;
-import fr.idarkay.morefeature.FeaturesClient;
+import fr.idarkay.morefeatures.FeaturesClient;
 import net.minecraft.client.render.BackgroundRenderer;
 import net.minecraft.client.render.Camera;
-import net.minecraft.client.world.ClientWorld;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.tag.FluidTags;
 import org.spongepowered.asm.mixin.Mixin;

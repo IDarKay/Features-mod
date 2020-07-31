@@ -1,0 +1,13 @@
+{
+  "key.more_features_id.options": "Open features option screen",
+  "key.more_features_id.addTime": "Add time to local",
+  "key.more_features_id.removeTime": "Remove time to local",
+  "key.categories.more_features_id": "Features mod",
+  "features.more_features_id.title": "Features",
+  "options.more_features_id.breakSafe":"Break Safe: ",
+  "options.more_features_id.fireEffect":"Hide fire effect: ",
+  "options.more_features_id.hidePumpkin":"Hide head pumpkin effect: ",
+  "options.more_features_id.potionTime":"Show time below effect: ",
+  "options.more_features_id.removeLavaFog":"Remove lava fog:  ",
+  "options.more_features_id.localTime": "Local time: "
+}

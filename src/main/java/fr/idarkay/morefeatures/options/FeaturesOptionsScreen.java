@@ -1,13 +1,12 @@
-package fr.idarkay.morefeature.options;
+package fr.idarkay.morefeatures.options;
 
-import fr.idarkay.morefeature.FeaturesClient;
+import fr.idarkay.morefeatures.FeaturesClient;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.ScreenTexts;
 import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.text.LiteralText;
 import net.minecraft.text.TranslatableText;
 import org.jetbrains.annotations.Nullable;
 
@@ -24,13 +23,13 @@ import org.jetbrains.annotations.Nullable;
 @Environment(EnvType.CLIENT)
 public class FeaturesOptionsScreen extends Screen
 {
-    private static final Option[] OPTIONS = new Option[] {Option.BREAK_SAFE, Option.SMOG_LAVA, Option.HIDE_FIRE, Option.HIDE_PUMPKIN, Option.SHOW_EFFECT_TIME};
+    private static final Option[] OPTIONS = new Option[] {Option.BREAK_SAFE, Option.SMOG_LAVA, Option.HIDE_FIRE, Option.HIDE_PUMPKIN, Option.SHOW_EFFECT_TIME, Option.LOCAL_IME};
     @Nullable private final Screen parent;
     private final FeaturesGameOptions option;
 
     public FeaturesOptionsScreen(@Nullable Screen parent, FeaturesGameOptions featuresGameOptions)
     {
-        super(new TranslatableText("features.more_feature_id.title"));
+        super(new TranslatableText("features.more_features_id.title"));
         this.parent = parent;
         this.option = featuresGameOptions;
     }

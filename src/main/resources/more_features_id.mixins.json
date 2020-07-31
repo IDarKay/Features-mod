@@ -1,11 +1,12 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "fr.idarkay.morefeature.mixin",
+  "package": "fr.idarkay.morefeatures.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
   ],
   "client": [
+    "ClientWorldPropertiesMixin",
     "HandledScreenMixin",
     "InGameHudMixin",
     "InGameOverlayRendererMixin",

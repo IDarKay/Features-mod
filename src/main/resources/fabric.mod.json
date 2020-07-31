@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "more_feature_id",
+  "id": "more_features_id",
   "version": "${version}",
 
   "name": "MoreFeature",
@@ -13,16 +13,16 @@
     "sources": "no"
   },
 
-  "icon": "assets/more_feature_id/icon.png",
+  "icon": "assets/more_features_id/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "fr.idarkay.morefeature.FeaturesClient"
+      "fr.idarkay.morefeatures.FeaturesClient"
     ]
   },
   "mixins": [
-    "more_feature_id.mixins.json"
+    "more_features_id.mixins.json"
   ],
 
   "depends": {

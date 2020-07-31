@@ -1,4 +1,4 @@
-package fr.idarkay.morefeature.options;
+package fr.idarkay.morefeatures.options;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;

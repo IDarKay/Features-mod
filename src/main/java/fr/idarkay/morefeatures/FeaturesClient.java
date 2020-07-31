@@ -1,7 +1,7 @@
-package fr.idarkay.morefeature;
+package fr.idarkay.morefeatures;
 
-import fr.idarkay.morefeature.options.FeaturesGameOptions;
-import fr.idarkay.morefeature.options.FeaturesOptionsScreen;
+import fr.idarkay.morefeatures.options.FeaturesGameOptions;
+import fr.idarkay.morefeatures.options.FeaturesOptionsScreen;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.api.ModInitializer;
@@ -22,32 +22,18 @@ public class FeaturesClient implements ModInitializer {
 	private static FeaturesGameOptions CONFIG;
 
 	//sound
-	public static final Identifier BREAK_SAFE_ID = new Identifier("more_feature_id:break_safe");
+	public static final Identifier BREAK_SAFE_ID = new Identifier("more_features_id:break_safe");
 	public static final SoundEvent BREAK_SAFE_EVENT = new SoundEvent(BREAK_SAFE_ID);
+	public static long LOCAL_TIME = 12000;
 
-	//keybinding
-	public static final KeyBinding OPEN_OPTIONS_KEYS = new KeyBinding(
-			"key.more_feature_id.options",
-			InputUtil.Type.KEYSYM,
-			GLFW.GLFW_KEY_F,
-			"key.categories.misc"
-			);
 
 
 
 	@Override
-	public void onInitialize() {
-		
+	public void onInitialize()
+	{
 		Registry.register(Registry.SOUND_EVENT, FeaturesClient.BREAK_SAFE_ID, BREAK_SAFE_EVENT);
-		KeyBindingHelper.registerKeyBinding(OPEN_OPTIONS_KEYS);
-
-		ClientTickCallback.EVENT.register(client -> {
-			while (OPEN_OPTIONS_KEYS.isPressed())
-			{
-				client.openScreen(new FeaturesOptionsScreen(null, options()));
-			}
-		});
-
+		KeyBindings.init();
 	}
 
 	public static FeaturesGameOptions options() {
@@ -59,7 +45,7 @@ public class FeaturesClient implements ModInitializer {
 	}
 
 	private static FeaturesGameOptions loadConfig() {
-		FeaturesGameOptions config = FeaturesGameOptions.load(new File("config/more_feature_id.json"));
+		FeaturesGameOptions config = FeaturesGameOptions.load(new File("config/more_features_id.json"));
 
 		return config;
 	}

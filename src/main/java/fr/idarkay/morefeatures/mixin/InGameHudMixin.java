@@ -1,9 +1,9 @@
-package fr.idarkay.morefeature.mixin;
+package fr.idarkay.morefeatures.mixin;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Ordering;
 import com.mojang.blaze3d.systems.RenderSystem;
-import fr.idarkay.morefeature.FeaturesClient;
+import fr.idarkay.morefeatures.FeaturesClient;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.font.TextRenderer;
 import net.minecraft.client.gui.DrawableHelper;
@@ -15,8 +15,6 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffectUtil;
-import net.minecraft.text.LiteralText;
-import net.minecraft.text.StringRenderable;
 import net.minecraft.util.math.MathHelper;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -55,15 +53,26 @@ public abstract class InGameHudMixin extends DrawableHelper
     @Inject(method = "renderPumpkinOverlay", at = @At("HEAD"), cancellable = true)
     private void renderPumpkinOverlay(CallbackInfo ci)
     {
-        if (FeaturesClient.options().hide_pumpkin)
+        if (FeaturesClient.options().hidePumpkin)
         {
             ci.cancel();
         }
     }
 
+//    @ModifyVariable(method = "renderStatusEffectOverlay", at = @At(value = "INVOKE", target = "Ljava/util/List;add(Ljava/lang/Object;)Z"))
+//    private Runnable modifyListRunnable(Runnable prev)
+//    {
+//        this.client.getTextureManager().bindTexture(sprite.getAtlas().getId());
+//        RenderSystem.color4f(1.0F, 1.0F, 1.0F, finalF);
+//        drawSprite(matrixStack, finalK + 3, finalL + 3, this.getZOffset(), 18, 18, sprite);
+//
+//        String time = StatusEffectUtil.durationToString(statusEffectInstance, 1.0F);
+//        textRenderer.drawWithShadow(matrixStack, time, finalK, finalL + 25, 8355711);
+//    }
+
     @Inject(method = "renderStatusEffectOverlay", at = @At("HEAD"), cancellable = true)
     protected void renderStatusEffectOverlay(MatrixStack matrixStack, CallbackInfo ci) {
-        if(!FeaturesClient.options().effect_time) return;
+        if(!FeaturesClient.options().effectTime) return;
         Collection<StatusEffectInstance> collection = this.client.player.getStatusEffects();
         if (!collection.isEmpty()) {
             TextRenderer textRenderer = this.getFontRenderer();
