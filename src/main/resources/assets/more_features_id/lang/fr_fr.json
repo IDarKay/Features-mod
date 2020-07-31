@@ -1,0 +1,13 @@
+{
+  "key.more_features_id.options": "Ouvrir le menu de fonctionnalités",
+  "key.more_features_id.addTime": "Ajouter du temps à l'heure local",
+  "key.more_features_id.removeTime": "Retirer du temps à l'heure local",
+  "key.categories.more_features_id": "Features mod",
+  "features.more_features_id.title": "Features / Fonctionnalités",
+  "options.more_features_id.breakSafe":"Protection de casse: ",
+  "options.more_features_id.fireEffect":"Cacher les flames: ",
+  "options.more_features_id.hidePumpkin":"Cacher le masque de citrouille: ",
+  "options.more_features_id.potionTime":"Aficher le temps restant des potion: ",
+  "options.more_features_id.removeLavaFog":"Retirer le brouillard dans la lave:  ",
+  "options.more_features_id.localTime": "Heure local: "
+}
