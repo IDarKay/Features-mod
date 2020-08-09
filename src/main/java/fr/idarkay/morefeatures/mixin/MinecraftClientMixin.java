@@ -27,7 +27,7 @@ public abstract class MinecraftClientMixin
 			ItemStack mainHandItem = this.player.getStackInHand(Hand.MAIN_HAND);
 			ItemStack offHandItem = this.player.getStackInHand(Hand.OFF_HAND);
 
-			if((mainHandItem != null && mainHandItem.isDamageable() &&  mainHandItem.getMaxDamage() - mainHandItem.getDamage() < 2) || (offHandItem != null && offHandItem.isDamageable() &&  offHandItem.getMaxDamage() - offHandItem.getDamage() < 2 ))
+			if((mainHandItem != null && mainHandItem.isDamageable() &&  mainHandItem.getMaxDamage() - mainHandItem.getDamage() < 2) || (offHandItem != null && offHandItem.isDamageable() &&  offHandItem.getMaxDamage() - offHandItem.getDamage() < 12 ))
 			{
 				this.player.playSound(FeaturesClient.BREAK_SAFE_EVENT, SoundCategory.AMBIENT, 1f, 1f);
 				info.cancel();

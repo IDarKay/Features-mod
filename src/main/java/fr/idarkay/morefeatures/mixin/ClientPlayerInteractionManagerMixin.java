@@ -40,7 +40,7 @@ public abstract class ClientPlayerInteractionManagerMixin
         if(FeaturesClient.options().breakSafe)
         {
             ItemStack mainHandItem = this.client.player.getStackInHand(Hand.MAIN_HAND);
-            if(mainHandItem != null && mainHandItem.isDamageable() &&  mainHandItem.getMaxDamage() - mainHandItem.getDamage() < 2)
+            if(mainHandItem != null && mainHandItem.isDamageable() &&  mainHandItem.getMaxDamage() - mainHandItem.getDamage() < 12)
             {
                 this.client.player.playSound(FeaturesClient.BREAK_SAFE_EVENT, SoundCategory.AMBIENT, 1f, 1f);
                 ci.setReturnValue(false);
@@ -54,7 +54,7 @@ public abstract class ClientPlayerInteractionManagerMixin
         if(FeaturesClient.options().breakSafe)
         {
             ItemStack mainHandItem = this.client.player.getStackInHand(Hand.MAIN_HAND);
-            if(mainHandItem != null && mainHandItem.isDamageable() &&  mainHandItem.getMaxDamage() - mainHandItem.getDamage() < 2)
+            if(mainHandItem != null && mainHandItem.isDamageable() &&  mainHandItem.getMaxDamage() - mainHandItem.getDamage() < 12)
             {
                 this.client.player.playSound(FeaturesClient.BREAK_SAFE_EVENT, SoundCategory.AMBIENT, 1f, 1f);
                 ci.cancel();
