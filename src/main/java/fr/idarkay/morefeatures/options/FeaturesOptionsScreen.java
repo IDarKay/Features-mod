@@ -30,6 +30,7 @@ public class FeaturesOptionsScreen extends Screen
     public FeaturesOptionsScreen(@Nullable Screen parent, FeaturesGameOptions featuresGameOptions)
     {
         super(new TranslatableText("features.more_features_id.title"));
+        this.passEvents = true;
         this.parent = parent;
         this.option = featuresGameOptions;
     }
@@ -46,7 +47,7 @@ public class FeaturesOptionsScreen extends Screen
             Option option = options[j];
             int width = this.width / 2 - 155 + i % 2 * 160;
             int height = this.height / 6 + 24 * (i >> 1);
-            this.addButton(option.createButton(FeaturesClient.options(), width, height, 150));
+            this.addButton(option.createButton(this.option, width, height, 150));
             ++i;
         }
 

@@ -4,7 +4,7 @@
   "version": "${version}",
 
   "name": "MoreFeature",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "description": "add feature to minecraft client",
   "authors": [
     "IDarKay"
   ],
@@ -14,10 +14,13 @@
   },
 
   "icon": "assets/more_features_id/icon.png",
-
-  "environment": "*",
+  "license": "MIT",
+  "environment": "client",
   "entrypoints": {
     "main": [
+      "fr.idarkay.morefeatures.FeaturesMod"
+    ],
+    "client": [
       "fr.idarkay.morefeatures.FeaturesClient"
     ]
   },
@@ -30,7 +33,4 @@
     "fabric": "*",
     "minecraft": "1.16.x"
   },
-  "suggests": {
-    "flamingo": "*"
-  }
 }

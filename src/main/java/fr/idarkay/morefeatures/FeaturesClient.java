@@ -2,6 +2,7 @@ package fr.idarkay.morefeatures;
 
 import fr.idarkay.morefeatures.options.FeaturesGameOptions;
 import fr.idarkay.morefeatures.options.FeaturesOptionsScreen;
+import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.api.ModInitializer;
@@ -17,7 +18,8 @@ import org.lwjgl.glfw.GLFW;
 import java.io.File;
 
 @Environment(EnvType.CLIENT)
-public class FeaturesClient implements ModInitializer {
+public class FeaturesClient implements ClientModInitializer
+{
 
 	private static FeaturesGameOptions CONFIG;
 
@@ -30,7 +32,7 @@ public class FeaturesClient implements ModInitializer {
 
 
 	@Override
-	public void onInitialize()
+	public void onInitializeClient()
 	{
 		Registry.register(Registry.SOUND_EVENT, FeaturesClient.BREAK_SAFE_ID, BREAK_SAFE_EVENT);
 		KeyBindings.init();
