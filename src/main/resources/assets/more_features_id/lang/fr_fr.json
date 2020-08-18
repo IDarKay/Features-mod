@@ -9,5 +9,7 @@
   "options.more_features_id.hidePumpkin":"Cacher le masque de citrouille: ",
   "options.more_features_id.potionTime":"Aficher le temps restant des potion: ",
   "options.more_features_id.removeLavaFog":"Retirer le brouillard dans la lave:  ",
-  "options.more_features_id.localTime": "Heure local: "
+  "options.more_features_id.localTime": "Heure local: ",
+  "options.more_features_id.fireEffectOnResistance": "Cacher les flames uniquement avec la resitance: ",
+  "options.more_features_id.removeAmbientFog":"Retirer le brouillard ambiant:  "
 }

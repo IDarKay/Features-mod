@@ -1,6 +1,5 @@
 package fr.idarkay.morefeatures.options;
 
-import fr.idarkay.morefeatures.FeaturesClient;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.gui.screen.Screen;
@@ -23,7 +22,7 @@ import org.jetbrains.annotations.Nullable;
 @Environment(EnvType.CLIENT)
 public class FeaturesOptionsScreen extends Screen
 {
-    private static final Option[] OPTIONS = new Option[] {Option.BREAK_SAFE, Option.SMOG_LAVA, Option.HIDE_FIRE, Option.HIDE_PUMPKIN, Option.SHOW_EFFECT_TIME, Option.LOCAL_IME};
+    private static final Option[] OPTIONS = new Option[] {Option.BREAK_SAFE, Option.FOG_LAVA, Option.AMBIENT_FOG, Option.HIDE_FIRE, Option.HIDE_FIRE_ONLY_ON_RESISTANCE, Option.HIDE_PUMPKIN, Option.SHOW_EFFECT_TIME, Option.LOCAL_IME};
     @Nullable private final Screen parent;
     private final FeaturesGameOptions option;
 

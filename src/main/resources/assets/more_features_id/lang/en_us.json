@@ -6,8 +6,10 @@
   "features.more_features_id.title": "Features",
   "options.more_features_id.breakSafe":"Breakage protection: ",
   "options.more_features_id.fireEffect":"Hide fire effect: ",
+  "options.more_features_id.fireEffectOnResistance":"Fire hide on fire resistance: ",
   "options.more_features_id.hidePumpkin":"Hide head pumpkin effect: ",
   "options.more_features_id.potionTime":"Show time below effect: ",
   "options.more_features_id.removeLavaFog":"Remove lava fog:  ",
+  "options.more_features_id.removeAmbientFog":"Remove ambient fog:  ",
   "options.more_features_id.localTime": "Local time: "
 }

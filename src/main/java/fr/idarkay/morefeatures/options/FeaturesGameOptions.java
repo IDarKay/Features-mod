@@ -26,9 +26,11 @@ import java.lang.reflect.Modifier;
 public class FeaturesGameOptions
 {
 
-    public double lavaSmogRemover = 0.0d;
+    public double lavaFogRemover = 0.0d;
+    public double ambientFogRemover = 0.0d;
     public boolean breakSafe = true;
     public boolean hideFire = false;
+    public boolean hideFireOnlyResistance = false;
     public boolean hidePumpkin = false;
     public boolean effectTime = true;
     public boolean localTime = false;

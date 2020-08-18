@@ -32,6 +32,11 @@ public abstract class Option
             options -> options.hideFire,
             (options, aBoolean) -> options.hideFire = aBoolean
     );
+    public static final BooleanOption HIDE_FIRE_ONLY_ON_RESISTANCE = new BooleanOption(
+            new TranslatableText("options.more_features_id.fireEffectOnResistance"),
+            options -> options.hideFireOnlyResistance,
+            (options, aBoolean) -> options.hideFireOnlyResistance = aBoolean
+    );
     public static final BooleanOption HIDE_PUMPKIN = new BooleanOption(
             new TranslatableText("options.more_features_id.hidePumpkin"),
             options -> options.hidePumpkin,
@@ -47,11 +52,24 @@ public abstract class Option
             options -> options.localTime,
             (options, aBoolean) -> options.localTime = aBoolean
     );
-    public static final DoubleOption SMOG_LAVA = new DoubleOption(
+    public static final DoubleOption FOG_LAVA = new DoubleOption(
             new TranslatableText("options.more_features_id.removeLavaFog"),
             0.0d, 1.0d, 0.0f,
-            options -> options.lavaSmogRemover,
-            (options, aDouble) -> options.lavaSmogRemover = aDouble,
+            options -> options.lavaFogRemover,
+            (options, aDouble) -> options.lavaFogRemover = aDouble,
+            (options, doubleOption) ->
+            {
+                double  ratio = doubleOption.getRatio(doubleOption.get(options));
+                if(ratio <= 0.0D)
+                    return ScreenTexts.OFF;
+                else return new LiteralText (((int) (ratio * 100.0D)) + "%");
+            }
+    );
+    public static final DoubleOption AMBIENT_FOG = new DoubleOption(
+            new TranslatableText("options.more_features_id.removeAmbientFog"),
+            0.0d, 1.0d, 0.0f,
+            options -> options.ambientFogRemover,
+            (options, aDouble) -> options.ambientFogRemover = aDouble,
             (options, doubleOption) ->
             {
                 double  ratio = doubleOption.getRatio(doubleOption.get(options));

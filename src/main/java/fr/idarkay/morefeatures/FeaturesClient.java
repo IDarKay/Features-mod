@@ -47,7 +47,7 @@ public class FeaturesClient implements ClientModInitializer
 	}
 
 	private static FeaturesGameOptions loadConfig() {
-		FeaturesGameOptions config = FeaturesGameOptions.load(new File("config/more_features_id.json"));
+		FeaturesGameOptions config = FeaturesGameOptions.load(new File("config/more_features_id.mixins.json"));
 
 		return config;
 	}
