@@ -35,7 +35,7 @@ This mod made by IDarKay
 
 ## 🛠️ Installation <a name = "instaltion"></a>
      
-Download file in <a href = "https://github.com/IDarKay/Features-mod/releases/latest"> Release </a> the jat  and add this
+Download  <a href = "https://www.curseforge.com/minecraft/mc-mods/features-mod/files"> jar file </a> and add this
 in mods folder with <a href= "https://www.curseforge.com/minecraft/mc-mods/fabric-api"> fabric-api </a>.
 
 Don't forget install fabric loader 
