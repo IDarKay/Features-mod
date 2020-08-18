@@ -57,20 +57,8 @@ public class FeaturesOptionsScreen extends Screen
     @Override
     public void render(MatrixStack matrices, int mouseX, int mouseY, float delta) {
         this.renderBackground(matrices);
-        this.drawCenteredText(matrices, this.textRenderer, this.title, this.width / 2, 20, 16777215);
+        drawCenteredText(matrices, this.textRenderer, this.title, this.width / 2, 15, 16777215);
         super.render(matrices, mouseX, mouseY, delta);
-    }
-
-    @Override
-    public boolean keyPressed(int keyCode, int scanCode, int modifiers)
-    {
-//        if(BreakSafe.OPEN_OPTIONS_KEYS.matchesKey(keyCode, scanCode))
-//        {
-//            this.client.openScreen((Screen)null);
-//            this.client.mouse.lockCursor();
-//            return true;
-//        }
-        return super.keyPressed(keyCode, scanCode, modifiers);
     }
 
     @Override
