@@ -11,5 +11,6 @@
   "options.more_features_id.removeLavaFog":"Retirer le brouillard dans la lave:  ",
   "options.more_features_id.removeAmbientFog":"Retirer le brouillard ambiant:  ",
   "options.more_features_id.localTime": "Heure local: ",
-  "options.more_features_id.fireEffectOnResistance": "Cacher les flames uniquement avec la resitance: "
+  "options.more_features_id.fireEffectOnResistance": "Cacher les flames uniquement avec la resitance: ",
+  "key.more_features_id.localTime": "Activer l'heur local: "
 }

@@ -2,6 +2,7 @@
   "key.more_features_id.options": "Open features option screen",
   "key.more_features_id.addTime": "Add time to local",
   "key.more_features_id.removeTime": "Remove time to local",
+  "key.more_features_id.localTime": "Active Local time: ",
   "key.categories.more_features_id": "Features mod",
   "features.more_features_id.title": "Features",
   "options.more_features_id.breakSafe":"Breakage protection: ",

@@ -4,16 +4,17 @@
   "package": "fr.idarkay.morefeatures.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+
   ],
   "client": [
+    "BackgroundRendererMixin",
+    "ClientPlayerInteractionManagerMixin",
     "ClientWorldPropertiesMixin",
     "HandledScreenMixin",
     "InGameHudMixin",
     "InGameOverlayRendererMixin",
-    "BackgroundRendererMixin",
-    "OptionScreenMixin",
-    "ClientPlayerInteractionManagerMixin",
-    "MinecraftClientMixin"
+    "MinecraftClientMixin",
+    "OptionMixin"
   ],
   "injectors": {
     "defaultRequire": 1

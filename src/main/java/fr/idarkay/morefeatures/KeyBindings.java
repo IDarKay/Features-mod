@@ -1,6 +1,7 @@
 package fr.idarkay.morefeatures;
 
 import fr.idarkay.morefeatures.options.FeaturesOptionsScreen;
+import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.fabricmc.fabric.api.event.client.ClientTickCallback;
 import net.minecraft.client.options.KeyBinding;
@@ -39,14 +40,21 @@ public abstract class KeyBindings
             GLFW.GLFW_KEY_KP_SUBTRACT,
             "key.categories.more_features_id"
     );
+    private static final KeyBinding ACTIVE_LOCAL_TIME = new KeyBinding(
+            "key.more_features_id.localTime",
+            InputUtil.Type.KEYSYM,
+            GLFW.GLFW_KEY_J,
+            "key.categories.more_features_id"
+    );
 
     public static void init()
     {
         KeyBindingHelper.registerKeyBinding(OPEN_OPTIONS_KEYS);
         KeyBindingHelper.registerKeyBinding(ADD_LOCAL_TIME_KEYS);
         KeyBindingHelper.registerKeyBinding(REMOVE_LOCAL_TIME_KEYS);
+        KeyBindingHelper.registerKeyBinding(ACTIVE_LOCAL_TIME);
 
-        ClientTickCallback.EVENT.register(client -> {
+        ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (OPEN_OPTIONS_KEYS.isPressed())
             {
                 client.openScreen(new FeaturesOptionsScreen(null, FeaturesClient.options()));
@@ -62,7 +70,11 @@ public abstract class KeyBindings
                     FeaturesClient.LOCAL_TIME -= 500;
                 }
             }
-
+            if(ACTIVE_LOCAL_TIME.isPressed())
+            {
+                FeaturesClient.options().localTime = !FeaturesClient.options().localTime;
+                FeaturesClient.options().writeChanges();
+            }
         });
     }
 
