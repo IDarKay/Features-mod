@@ -12,5 +12,10 @@
   "options.more_features_id.potionTime":"Show time below effect: ",
   "options.more_features_id.removeLavaFog":"Remove lava fog:  ",
   "options.more_features_id.removeAmbientFog":"Remove ambient fog:  ",
-  "options.more_features_id.localTime": "Local time: "
+  "options.more_features_id.localTime": "Local time: ",
+  "options.more_features_id.weatherEditor": "Weather Editor: ",
+  "options.more_features_id.weather.server": "Server",
+  "options.more_features_id.weather.sun": "Sun",
+  "options.more_features_id.weather.rain": "Rain",
+  "options.more_features_id.weather.thunder": "Thunder"
 }

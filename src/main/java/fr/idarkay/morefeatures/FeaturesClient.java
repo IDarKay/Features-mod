@@ -29,6 +29,7 @@ public class FeaturesClient implements ClientModInitializer
 	{
 		Registry.register(Registry.SOUND_EVENT, FeaturesClient.BREAK_SAFE_ID, BREAK_SAFE_EVENT);
 		KeyBindings.init();
+
 	}
 
 	public static FeaturesGameOptions options() {

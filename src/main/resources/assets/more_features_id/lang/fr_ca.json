@@ -12,5 +12,10 @@
   "options.more_features_id.removeAmbientFog":"Retirer le brouillard ambiant:  ",
   "options.more_features_id.localTime": "Heure local: ",
   "options.more_features_id.fireEffectOnResistance": "Cacher les flames uniquement avec la resitance: ",
-  "key.more_features_id.localTime": "Activer l'heur local: "
+  "key.more_features_id.localTime": "Activer l'heur local: ",
+  "options.more_features_id.weatherEditor": "Editeur de météo: ",
+  "options.more_features_id.weather.server": "Serveur",
+  "options.more_features_id.weather.sun": "Soleil",
+  "options.more_features_id.weather.rain": "Pluie",
+  "options.more_features_id.weather.thunder": "Foudre"
 }

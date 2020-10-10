@@ -3,6 +3,7 @@ package fr.idarkay.morefeatures.options;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import fr.idarkay.morefeatures.options.mode.WeatherMode;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 
@@ -34,6 +35,7 @@ public class FeaturesGameOptions
     public boolean hidePumpkin = false;
     public boolean effectTime = true;
     public boolean localTime = false;
+    public WeatherMode weatherMode = WeatherMode.SERVER;
 
     private File saveFile;
 

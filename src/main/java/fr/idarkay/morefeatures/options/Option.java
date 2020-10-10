@@ -1,5 +1,6 @@
 package fr.idarkay.morefeatures.options;
 
+import fr.idarkay.morefeatures.options.mode.WeatherMode;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.gui.screen.ScreenTexts;
@@ -77,6 +78,11 @@ public abstract class Option
                     return ScreenTexts.OFF;
                 else return new LiteralText (((int) (ratio * 100.0D)) + "%");
             }
+    );
+    public static final CyclingOption WEATHER_EDITOR = new CyclingOption(
+            new TranslatableText("options.more_features_id.weatherEditor"),
+            (featuresGameOptions, integer) -> featuresGameOptions.weatherMode = WeatherMode.byId(integer),
+            (featuresGameOptions, cyclingOption) -> new TranslatableText(featuresGameOptions.weatherMode.getTranslationKey())
     );
 
     protected final MutableText prefix;

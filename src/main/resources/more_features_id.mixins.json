@@ -14,7 +14,8 @@
     "InGameHudMixin",
     "InGameOverlayRendererMixin",
     "MinecraftClientMixin",
-    "OptionMixin"
+    "OptionMixin",
+    "WorldMixin"
   ],
   "injectors": {
     "defaultRequire": 1

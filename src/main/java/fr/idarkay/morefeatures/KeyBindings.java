@@ -3,10 +3,8 @@ package fr.idarkay.morefeatures;
 import fr.idarkay.morefeatures.options.FeaturesOptionsScreen;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
-import net.fabricmc.fabric.api.event.client.ClientTickCallback;
 import net.minecraft.client.options.KeyBinding;
 import net.minecraft.client.util.InputUtil;
-import net.minecraft.util.registry.Registry;
 import org.lwjgl.glfw.GLFW;
 
 /**

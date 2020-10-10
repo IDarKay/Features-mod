@@ -22,7 +22,7 @@ import org.jetbrains.annotations.Nullable;
 @Environment(EnvType.CLIENT)
 public class FeaturesOptionsScreen extends Screen
 {
-    private static final Option[] OPTIONS = new Option[] {Option.BREAK_SAFE, Option.FOG_LAVA, Option.AMBIENT_FOG, Option.HIDE_FIRE, Option.HIDE_FIRE_ONLY_ON_RESISTANCE, Option.HIDE_PUMPKIN, Option.SHOW_EFFECT_TIME, Option.LOCAL_IME};
+    private static final Option[] OPTIONS = new Option[] {Option.BREAK_SAFE, Option.FOG_LAVA, Option.AMBIENT_FOG, Option.HIDE_FIRE, Option.HIDE_FIRE_ONLY_ON_RESISTANCE, Option.HIDE_PUMPKIN, Option.SHOW_EFFECT_TIME, Option.LOCAL_IME, Option.WEATHER_EDITOR};
     @Nullable private final Screen parent;
     private final FeaturesGameOptions option;
 
