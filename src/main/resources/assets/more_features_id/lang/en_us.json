@@ -13,9 +13,15 @@
   "options.more_features_id.removeLavaFog":"Remove lava fog:  ",
   "options.more_features_id.removeAmbientFog":"Remove ambient fog:  ",
   "options.more_features_id.localTime": "Local time: ",
-  "options.more_features_id.weatherEditor": "Weather Editor: ",
-  "options.more_features_id.weather.server": "Server",
-  "options.more_features_id.weather.sun": "Sun",
-  "options.more_features_id.weather.rain": "Rain",
-  "options.more_features_id.weather.thunder": "Thunder"
+  "options.more_features_id.renderBeaconBeam": "Render beacon beam: ",
+  "options.more_features_id.lightSameItem": "Light same item: ",
+  "options.more_features_id.red": "Red: ",
+  "options.more_features_id.green": "Green: ",
+  "options.more_features_id.blue": "Blue: ",
+  "options.more_features_id.alpha": "Alpha: ",
+  "over_light.more_features_id.title": "Light same item",
+  "breakSafe.more_features_id.title": "Breakage protection",
+  "options.more_features_id.protectDurability": "Protect at durability: ",
+  "options.more_features_id.protectSound": "Protect sound: "
+
 }

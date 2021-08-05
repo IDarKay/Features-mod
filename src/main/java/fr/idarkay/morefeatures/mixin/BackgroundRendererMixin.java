@@ -1,12 +1,10 @@
 package fr.idarkay.morefeatures.mixin;
 
-import com.mojang.blaze3d.platform.GlStateManager;
 import com.mojang.blaze3d.systems.RenderSystem;
 import fr.idarkay.morefeatures.FeaturesClient;
 import net.minecraft.client.render.BackgroundRenderer;
 import net.minecraft.client.render.Camera;
-import net.minecraft.fluid.FluidState;
-import net.minecraft.tag.FluidTags;
+import net.minecraft.client.render.CameraSubmersionType;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -30,15 +28,15 @@ public abstract class BackgroundRendererMixin
     {
         float lavaFogRemoverValue = Math.min((float) FeaturesClient.options().lavaFogRemover, 1.0F);
 
-        FluidState fluidState = camera.getSubmergedFluidState();
-        if(fluidState.isIn(FluidTags.LAVA))
+        CameraSubmersionType cameraSubmersionType = camera.getSubmersionType();
+        if(cameraSubmersionType == CameraSubmersionType.LAVA)
         {
             if(lavaFogRemoverValue > 0)
             {
-                RenderSystem.fogStart(viewDistance * 0.75f * lavaFogRemoverValue);
-                RenderSystem.fogEnd(viewDistance * lavaFogRemoverValue);
-                RenderSystem.fogMode(GlStateManager.FogMode.LINEAR);
-                RenderSystem.setupNvFogDistance();
+                RenderSystem.setShaderFogStart(viewDistance * 0.75f * lavaFogRemoverValue);
+                RenderSystem.setShaderFogEnd(viewDistance * lavaFogRemoverValue);
+//                RenderSystem.fogMode(GlStateManager.FogMode.LINEAR);
+//                RenderSystem.setupNvFogDistance();
 
                 ci.cancel();
             }
@@ -48,10 +46,10 @@ public abstract class BackgroundRendererMixin
         float netherFogRemoverValue = Math.min((float) FeaturesClient.options().ambientFogRemover, 1.0F);
         if(thickFog && netherFogRemoverValue > 0)
         {
-            RenderSystem.fogStart(Math.min(viewDistance * 0.5F * netherFogRemoverValue * 2.0F, viewDistance * 0.90F));
-            RenderSystem.fogEnd(Math.min(viewDistance, viewDistance * 0.75F * netherFogRemoverValue * 2.0F));
-            RenderSystem.fogMode(GlStateManager.FogMode.LINEAR);
-            RenderSystem.setupNvFogDistance();
+            RenderSystem.setShaderFogStart(Math.min(viewDistance * 0.5F * netherFogRemoverValue * 2.0F, viewDistance * 0.90F));
+            RenderSystem.setShaderFogEnd(Math.min(viewDistance, viewDistance * 0.75F * netherFogRemoverValue * 2.0F));
+//            RenderSystem.fogMode(GlStateManager.FogMode.LINEAR);
+//            RenderSystem.setupNvFogDistance();
 
             ci.cancel();
         }

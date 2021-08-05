@@ -1,10 +1,9 @@
 package fr.idarkay.morefeatures.options;
 
-import fr.idarkay.morefeatures.options.mode.WeatherMode;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.gui.screen.ScreenTexts;
-import net.minecraft.client.gui.widget.AbstractButtonWidget;
+import net.minecraft.client.gui.widget.ClickableWidget;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.MutableText;
 import net.minecraft.text.TranslatableText;
@@ -28,6 +27,11 @@ public abstract class Option
             options -> options.breakSafe,
             (options, aBoolean) -> options.breakSafe = aBoolean
     );
+    public static final BooleanOption LIGHT_SAME_ITEM = new BooleanOption(
+            new TranslatableText("options.more_features_id.lightSameItem"),
+            options -> options.lightSameItem,
+            (options, aBoolean) -> options.lightSameItem = aBoolean
+    );
     public static final BooleanOption HIDE_FIRE = new BooleanOption(
             new TranslatableText("options.more_features_id.fireEffect"),
             options -> options.hideFire,
@@ -48,10 +52,20 @@ public abstract class Option
             options -> options.effectTime,
             (options, aBoolean) -> options.effectTime = aBoolean
     );
+    public static final BooleanOption PROTECT_SOUND = new BooleanOption(
+            new TranslatableText("options.more_features_id.protectSound"),
+            options -> options.breakSafeSound,
+            (options, aBoolean) -> options.breakSafeSound = aBoolean
+    );
     public static final BooleanOption LOCAL_IME = new BooleanOption(
             new TranslatableText("options.more_features_id.localTime"),
             options -> options.localTime,
             (options, aBoolean) -> options.localTime = aBoolean
+    );
+    public static final BooleanOption RENDER_BEACON_BEAM = new BooleanOption(
+            new TranslatableText("options.more_features_id.renderBeaconBeam"),
+            options -> options.renderBeaconBeam,
+            (options, aBoolean) -> options.renderBeaconBeam = aBoolean
     );
     public static final DoubleOption FOG_LAVA = new DoubleOption(
             new TranslatableText("options.more_features_id.removeLavaFog"),
@@ -79,10 +93,40 @@ public abstract class Option
                 else return new LiteralText (((int) (ratio * 100.0D)) + "%");
             }
     );
-    public static final CyclingOption WEATHER_EDITOR = new CyclingOption(
-            new TranslatableText("options.more_features_id.weatherEditor"),
-            (featuresGameOptions, integer) -> featuresGameOptions.weatherMode = WeatherMode.byId(integer),
-            (featuresGameOptions, cyclingOption) -> new TranslatableText(featuresGameOptions.weatherMode.getTranslationKey())
+    public static final DoubleOption LIGHT8SAME_ITEM_RED = new DoubleOption(
+            new TranslatableText("options.more_features_id.red"),
+            0.0d, 255.0d, 1.0f,
+            options -> (double) options.rLightSameItem,
+            (options, aDouble) -> options.rLightSameItem = aDouble.intValue(),
+            (options, doubleOption) -> new LiteralText ( String.valueOf((int) doubleOption.get(options)))
+    );
+    public static final DoubleOption LIGHT8SAME_ITEM_GREEN = new DoubleOption(
+            new TranslatableText("options.more_features_id.green"),
+            0.0d, 255.0d, 1.0f,
+            options -> (double) options.gLightSameItem,
+            (options, aDouble) -> options.gLightSameItem = aDouble.intValue(),
+            (options, doubleOption) -> new LiteralText ( String.valueOf((int) doubleOption.get(options)))
+    );
+    public static final DoubleOption LIGHT8SAME_ITEM_BLUE = new DoubleOption(
+            new TranslatableText("options.more_features_id.blue"),
+            0.0d, 255.0d, 1.0f,
+            options -> (double) options.bLightSameItem,
+            (options, aDouble) -> options.bLightSameItem = aDouble.intValue(),
+            (options, doubleOption) -> new LiteralText ( String.valueOf((int) doubleOption.get(options)))
+    );
+    public static final DoubleOption LIGHT8SAME_ITEM_ALPHA = new DoubleOption(
+            new TranslatableText("options.more_features_id.alpha"),
+            0.0d, 255.0d, 1.0f,
+            options -> (double) options.aLightSameItem,
+            (options, aDouble) -> options.aLightSameItem = aDouble.intValue(),
+            (options, doubleOption) -> new LiteralText ( String.valueOf((int) doubleOption.get(options)))
+    );
+    public static final DoubleOption PROTECT_DURABILITY = new DoubleOption(
+            new TranslatableText("options.more_features_id.protectDurability"),
+            5.0d, 100.0d, 1.0f,
+            options -> (double) options.protectDurability,
+            (options, aDouble) -> options.protectDurability = aDouble.intValue(),
+            (options, doubleOption) -> new LiteralText ( String.valueOf((int) doubleOption.get(options)))
     );
 
     protected final MutableText prefix;
@@ -92,7 +136,7 @@ public abstract class Option
         this.prefix = prefix;
     }
 
-    public abstract AbstractButtonWidget createButton(FeaturesGameOptions options, int x, int y, int width);
+    public abstract ClickableWidget createButton(FeaturesGameOptions options, int x, int y, int width);
 
     public MutableText getDisplayPrefix() {
         return prefix;

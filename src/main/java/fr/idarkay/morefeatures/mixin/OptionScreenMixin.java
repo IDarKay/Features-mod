@@ -1,10 +1,10 @@
 package fr.idarkay.morefeatures.mixin;
 
 import fr.idarkay.morefeatures.FeaturesClient;
-import fr.idarkay.morefeatures.options.FeaturesOptionsScreen;
-import net.minecraft.client.MinecraftClient;
+import fr.idarkay.morefeatures.options.screen.FeaturesOptionsScreen;
+import fr.idarkay.morefeatures.options.screen.MenuButtons;
 import net.minecraft.client.gui.screen.Screen;
-import net.minecraft.client.gui.screen.options.OptionsScreen;
+import net.minecraft.client.gui.screen.option.OptionsScreen;
 import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
@@ -34,14 +34,9 @@ public abstract class OptionScreenMixin extends Screen
     @Inject(method = "init", at = @At("RETURN"))
     protected void init(CallbackInfo ci)
     {
-        if(MinecraftClient.getInstance().world != null)
+        if(this.client != null && this.client.world != null)
         {
-            // down Done button
-            this.buttons.get(this.buttons.size() - 1).y = this.height / 6 + 192;
-
-            this.addButton(new ButtonWidget(this.width / 2 - 155, this.height / 6 + 144 - 6, 150, 20, new LiteralText("Features"), (buttonWidget) -> {
-                this.client.openScreen(new FeaturesOptionsScreen(this, FeaturesClient.options()));
-            }));
+            this.addDrawableChild(MenuButtons.FEATURES.createButton(this, FeaturesClient.options(), this.width / 2 - 155, this.height / 6 + 144 - 6, 150));
         }
     }
 }

@@ -3,8 +3,8 @@ package fr.idarkay.morefeatures.options;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.gui.screen.ScreenTexts;
-import net.minecraft.client.gui.widget.AbstractButtonWidget;
 import net.minecraft.client.gui.widget.ButtonWidget;
+import net.minecraft.client.gui.widget.ClickableWidget;
 import net.minecraft.text.MutableText;
 import net.minecraft.text.Text;
 
@@ -51,7 +51,7 @@ public class BooleanOption extends Option
     }
 
     @Override
-    public AbstractButtonWidget createButton(FeaturesGameOptions options, int x, int y, int width)
+    public ClickableWidget createButton(FeaturesGameOptions options, int x, int y, int width)
     {
         return new ButtonWidget(x, y, width, 20, getDisplayString(options), button ->
         {
@@ -61,7 +61,7 @@ public class BooleanOption extends Option
     }
 
     public Text getDisplayString(FeaturesGameOptions options) {
-        return this.getDisplayPrefix().copy().append(ScreenTexts.getToggleText(this.get(options)));
+        return this.getDisplayPrefix().copy().append(ScreenTexts.onOrOff(this.get(options)));
     }
 
 }

@@ -12,7 +12,11 @@
     "homepage": "no",
     "sources": "no"
   },
+  "custom": {
+    "modmenu": {
 
+    }
+  },
   "icon": "assets/more_features_id/icon.png",
   "license": "MIT",
   "environment": "client",
@@ -22,6 +26,9 @@
     ],
     "client": [
       "fr.idarkay.morefeatures.FeaturesClient"
+    ],
+    "modmenu": [
+      "fr.idarkay.morefeatures.FeaturesModApiImpl"
     ]
   },
   "mixins": [
@@ -29,6 +36,8 @@
   ],
   "depends": {
     "fabricloader": ">=0.7.4",
-    "fabric": "*"
+    "fabric": "*",
+    "minecraft": "1.17.x",
+    "java": ">=16"
   }
 }

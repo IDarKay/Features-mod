@@ -1,7 +1,7 @@
 package fr.idarkay.morefeatures.mixin;
 
-import net.minecraft.client.options.DoubleOption;
-import net.minecraft.client.options.Option;
+import net.minecraft.client.option.DoubleOption;
+import net.minecraft.client.option.Option;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import org.spongepowered.asm.mixin.Final;
@@ -26,8 +26,6 @@ public abstract class OptionMixin
     @Shadow
     @Final
     public static final DoubleOption GAMMA;
-
-    @Shadow protected abstract Text method_30501(Text text);
 
     static {
         GAMMA = new DoubleOption("options.gamma", 0.0D, 5.0D, 0.0F, (gameOptions) -> {

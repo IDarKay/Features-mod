@@ -2,7 +2,7 @@ package fr.idarkay.morefeatures.options;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.minecraft.client.gui.widget.AbstractButtonWidget;
+import net.minecraft.client.gui.widget.ClickableWidget;
 import net.minecraft.text.MutableText;
 import net.minecraft.text.Text;
 import net.minecraft.util.math.MathHelper;
@@ -91,7 +91,7 @@ public class DoubleOption extends Option
     }
 
     @Override
-    public AbstractButtonWidget createButton(FeaturesGameOptions options, int x, int y, int width)
+    public ClickableWidget createButton(FeaturesGameOptions options, int x, int y, int width)
     {
         return new DoubleSliderWidget(options, x, y, width, 20, this);
     }

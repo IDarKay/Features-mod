@@ -9,13 +9,15 @@
   "options.more_features_id.hidePumpkin":"Cacher le masque de citrouille: ",
   "options.more_features_id.potionTime":"Aficher le temps restant des potion: ",
   "options.more_features_id.removeLavaFog":"Retirer le brouillard dans la lave:  ",
-  "options.more_features_id.removeAmbientFog":"Retirer le brouillard ambiant:  ",
   "options.more_features_id.localTime": "Heure local: ",
   "options.more_features_id.fireEffectOnResistance": "Cacher les flames uniquement avec la resitance: ",
-  "key.more_features_id.localTime": "Activer l'heur local: ",
-  "options.more_features_id.weatherEditor": "Editeur de météo: ",
-  "options.more_features_id.weather.server": "Serveur",
-  "options.more_features_id.weather.sun": "Soleil",
-  "options.more_features_id.weather.rain": "Pluie",
-  "options.more_features_id.weather.thunder": "Foudre"
+  "options.more_features_id.removeAmbientFog":"Retirer le brouillard ambiant:  ",
+  "key.more_features_id.localTime": "Activer l'heure locale: ",
+  "options.more_features_id.renderBeaconBeam": "Faisceau du beacon: ",
+  "options.more_features_id.lightSameItem": "Eclairer les même items: ",
+  "options.more_features_id.red": "Rouge: ",
+  "options.more_features_id.green": "Vert: ",
+  "options.more_features_id.blue": "Bleu: ",
+  "options.more_features_id.alpha": "Alpha: ",
+  "over_light.more_features_id.title": "Eclairer les même items"
 }

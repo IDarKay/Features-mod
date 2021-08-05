@@ -29,7 +29,6 @@ public class FeaturesClient implements ClientModInitializer
 	{
 		Registry.register(Registry.SOUND_EVENT, FeaturesClient.BREAK_SAFE_ID, BREAK_SAFE_EVENT);
 		KeyBindings.init();
-
 	}
 
 	public static FeaturesGameOptions options() {
@@ -41,9 +40,8 @@ public class FeaturesClient implements ClientModInitializer
 	}
 
 	private static FeaturesGameOptions loadConfig() {
-		FeaturesGameOptions config = FeaturesGameOptions.load(new File("config/more_features_id.mixins.json"));
 
-		return config;
+		return FeaturesGameOptions.load(new File("config/more_features_id.json"));
 	}
 
 }

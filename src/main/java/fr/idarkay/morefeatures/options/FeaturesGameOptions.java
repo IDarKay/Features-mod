@@ -3,7 +3,6 @@ package fr.idarkay.morefeatures.options;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import fr.idarkay.morefeatures.options.mode.WeatherMode;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 
@@ -30,12 +29,19 @@ public class FeaturesGameOptions
     public double lavaFogRemover = 0.0d;
     public double ambientFogRemover = 0.0d;
     public boolean breakSafe = true;
+    public boolean breakSafeSound = true;
     public boolean hideFire = false;
     public boolean hideFireOnlyResistance = false;
     public boolean hidePumpkin = false;
     public boolean effectTime = true;
     public boolean localTime = false;
-    public WeatherMode weatherMode = WeatherMode.SERVER;
+    public boolean renderBeaconBeam = true;
+    public boolean lightSameItem = true;
+    public int rLightSameItem = 0xFF;
+    public int gLightSameItem = 0x0;
+    public int bLightSameItem = 0x0;
+    public int aLightSameItem = 0xA0;
+    public int protectDurability = 10;
 
     private File saveFile;
 
@@ -44,6 +50,11 @@ public class FeaturesGameOptions
             .setPrettyPrinting()
             .excludeFieldsWithModifiers(Modifier.PRIVATE)
             .create();
+
+    public int getLightSameItemColor()
+    {
+        return (aLightSameItem % 256) << 24 | (rLightSameItem % 256) << 16 | (gLightSameItem % 256) << 8 | (bLightSameItem % 256);
+    }
 
     public static FeaturesGameOptions load(File file)
     {

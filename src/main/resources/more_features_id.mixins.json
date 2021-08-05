@@ -15,7 +15,8 @@
     "InGameOverlayRendererMixin",
     "MinecraftClientMixin",
     "OptionMixin",
-    "WorldMixin"
+    "OptionScreenMixin",
+    "BeaconBlockEntityRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1
