@@ -23,7 +23,7 @@ import org.jetbrains.annotations.Nullable;
 public class FeaturesOptionsScreen extends FeaturesScreen
 {
     private static final MenuButton[] SUB_MENU_BUTTONS = new MenuButton[] {MenuButtons.BREAKAGE_PROTECTION, MenuButtons.LIGHT_ITEM};
-    private static final Option[] OPTIONS = new Option[] {Option.FOG_LAVA, Option.AMBIENT_FOG, Option.HIDE_FIRE, Option.HIDE_FIRE_ONLY_ON_RESISTANCE, Option.HIDE_PUMPKIN, Option.SHOW_EFFECT_TIME, Option.LOCAL_IME, Option.RENDER_BEACON_BEAM, Option.LIGHT_SAME_ITEM };
+    private static final Option[] OPTIONS = new Option[] {Option.FOG_LAVA, Option.AMBIENT_FOG, Option.HIDE_FIRE, Option.HIDE_FIRE_ONLY_ON_RESISTANCE, Option.HIDE_PUMPKIN, Option.SHOW_EFFECT_TIME, Option.LOCAL_IME, Option.RENDER_BEACON_BEAM};
 
     public FeaturesOptionsScreen(@Nullable Screen parent)
     {
