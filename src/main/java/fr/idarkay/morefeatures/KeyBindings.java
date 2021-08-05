@@ -6,6 +6,9 @@ import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.fabricmc.fabric.api.event.client.ClientTickCallback;
 import net.minecraft.client.options.KeyBinding;
 import net.minecraft.client.util.InputUtil;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.Hand;
+import net.minecraft.util.Util;
 import net.minecraft.util.registry.Registry;
 import org.lwjgl.glfw.GLFW;
 
@@ -47,12 +50,14 @@ public abstract class KeyBindings
             "key.categories.more_features_id"
     );
 
+
     public static void init()
     {
         KeyBindingHelper.registerKeyBinding(OPEN_OPTIONS_KEYS);
         KeyBindingHelper.registerKeyBinding(ADD_LOCAL_TIME_KEYS);
         KeyBindingHelper.registerKeyBinding(REMOVE_LOCAL_TIME_KEYS);
         KeyBindingHelper.registerKeyBinding(ACTIVE_LOCAL_TIME);
+
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (OPEN_OPTIONS_KEYS.isPressed())
