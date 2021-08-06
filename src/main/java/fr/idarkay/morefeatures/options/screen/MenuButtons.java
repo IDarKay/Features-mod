@@ -1,6 +1,6 @@
 package fr.idarkay.morefeatures.options.screen;
 
-import net.minecraft.text.LiteralText;
+import fr.idarkay.morefeatures.FeaturesMod;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 
@@ -16,12 +16,15 @@ import net.minecraft.text.TranslatableText;
  */
 public abstract class MenuButtons
 {
-
-    public static Text LIGHT_ITEM_TEXT = new TranslatableText("over_light.more_features_id.title");
-    public static Text FEATURES_TEXT = new TranslatableText("features.more_features_id.title");
-    public static Text BREAKAGE_PROTECTION_TEXT = new TranslatableText("breakSafe.more_features_id.title");
+    private static final String MOD_ID = FeaturesMod.MOD_ID;
+    
+    public static Text LIGHT_ITEM_TEXT = new TranslatableText("over_light." + MOD_ID + ".title");
+    public static Text FEATURES_TEXT = new TranslatableText("features." + MOD_ID + ".title");
+    public static Text BREAKAGE_PROTECTION_TEXT = new TranslatableText("breakSafe." + MOD_ID + ".title");
+    public static Text AUTO_FARM_TEXT = new TranslatableText("auto_farm." + MOD_ID + ".title");
 
     public static MenuButton LIGHT_ITEM = new MenuButton(LIGHT_ITEM_TEXT, LightItemOptionsScreen::new);
     public static MenuButton FEATURES = new MenuButton(FEATURES_TEXT, FeaturesOptionsScreen::new);
     public static MenuButton BREAKAGE_PROTECTION = new MenuButton(BREAKAGE_PROTECTION_TEXT, BreakageProtectionScreen::new);
+    public static MenuButton AUTO_FARM = new MenuButton(AUTO_FARM_TEXT, AutoFarmScreen::new);
 }

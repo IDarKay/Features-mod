@@ -1,8 +1,7 @@
 package fr.idarkay.morefeatures.options;
 
-import com.google.gson.FieldNamingPolicy;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import com.google.gson.*;
+import fr.idarkay.morefeatures.annotation.Exclude;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 
@@ -10,7 +9,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.lang.reflect.Modifier;
 
 /**
  * File <b>FeaturesGameOptions</b> located on fr.idarkay.breaksafe.options
@@ -43,17 +41,61 @@ public class FeaturesGameOptions
     public int aLightSameItem = 0xA0;
     public int protectDurability = 10;
 
-    private File saveFile;
+    // auto_farm
+    public boolean eatOn = true;
+//    public boolean autoUseActivated = false;
+    public double eatLvlLimit = 16.0f;
+    public double attackCoolDown = 40.0f;
+    public double useCoolDown = 10.0f;
+
+    @Exclude public boolean autoAttackActivated = false;
+    @Exclude public boolean autoMineActivated = false;
+    @Exclude public boolean autoClickActivated = false;
+
+    @Exclude private File saveFile;
 
     private static final Gson gson = new GsonBuilder()
             .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
             .setPrettyPrinting()
-            .excludeFieldsWithModifiers(Modifier.PRIVATE)
+            .setExclusionStrategies(new ExcludeExclusionStrategy())
             .create();
 
     public int getLightSameItemColor()
     {
         return (aLightSameItem % 256) << 24 | (rLightSameItem % 256) << 16 | (gLightSameItem % 256) << 8 | (bLightSameItem % 256);
+    }
+
+    public boolean switchAttackActive()
+    {
+        this.autoAttackActivated = !this.autoAttackActivated;
+        if (this.autoAttackActivated)
+        {
+            this.autoMineActivated = false;
+            this.autoClickActivated = false;
+        }
+        return autoAttackActivated;
+    }
+
+    public boolean switchMineActive()
+    {
+        this.autoMineActivated = !this.autoMineActivated;
+        if (this.autoMineActivated)
+        {
+            this.autoClickActivated = false;
+            this.autoAttackActivated = false;
+        }
+        return autoMineActivated;
+    }
+
+    public boolean switchClickActive()
+    {
+        this.autoClickActivated = !this.autoClickActivated;
+        if (this.autoClickActivated)
+        {
+            this.autoMineActivated = false;
+            this.autoAttackActivated = false;
+        }
+        return autoClickActivated;
     }
 
     public static FeaturesGameOptions load(File file)
@@ -94,6 +136,21 @@ public class FeaturesGameOptions
             gson.toJson(this, writer);
         } catch (IOException e) {
             throw new RuntimeException("Could not save configuration file", e);
+        }
+    }
+
+    static class ExcludeExclusionStrategy implements ExclusionStrategy
+    {
+        @Override
+        public boolean shouldSkipField(FieldAttributes field)
+        {
+            return field.getAnnotation(Exclude.class) != null;
+        }
+
+        @Override
+        public boolean shouldSkipClass(Class<?> clazz)
+        {
+            return false;
         }
     }
 

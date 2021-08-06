@@ -22,6 +22,26 @@
   "over_light.more_features_id.title": "Light same item",
   "breakSafe.more_features_id.title": "Breakage protection",
   "options.more_features_id.protectDurability": "Protect at durability: ",
-  "options.more_features_id.protectSound": "Protect sound: "
-
+  "options.more_features_id.protectSound": "Protect sound: ",
+  "key.more_features_id.turnOn": "Turn on auto farm",
+  "key.more_features_id.turnOnAutoMine": "Turn on auto mine",
+  "key.more_features_id.turnOnAutoRClick": "Turn on auto right click",
+  "key.more_features_id.autoFarmOptions": "Open auto farm options",
+  "auto_farm.more_features_id.title": "AutoFam",
+  "message.more_features_id.attackOn": "Attack turn §aOn",
+  "message.more_features_id.attackOff": "Attack turn §cOff",
+  "message.more_features_id.mineOff": "Mine turn §cOff",
+  "message.more_features_id.mineOn": "Mine turn §aOn",
+  "message.more_features_id.clickOff": "Click turn §cOff",
+  "message.more_features_id.clickOn": "Click turn §aOn",
+  "message.more_features_id.noFood": "§c§bWARN: §rNo food in offHand",
+  "message.more_features_id.error": "§4§bERROR: §r§cAn error occurred with auto farm turn off auto farm!",
+  "options.more_features_id.eatAt" : "Eat at: ",
+  "options.more_features_id.attackCoolDown" : "Attack every: ",
+  "options.more_features_id.useCoolDown" : "Use every: ",
+  "options.more_features_id.eat" : "Eat: ",
+  "options.more_features_id.activated" : "Auto farm: ",
+  "options.more_features_id.autoMine" : "Auto mine: ",
+  "options.more_features_id.autoCLick" : "Auto right click: ",
+  "screen.more_features_id.options" : "options screen"
 }

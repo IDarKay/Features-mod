@@ -17,6 +17,9 @@ import java.util.Collections;
  */
 public class FeaturesMod implements ModInitializer
 {
+
+    public static final String MOD_ID = "more_features_id";
+
     @Override
     public void onInitialize()
     {
