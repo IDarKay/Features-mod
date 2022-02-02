@@ -32,6 +32,8 @@ public class FeaturesClient implements ClientModInitializer
 
 	private long lastInput = 0;
 	private int countDown = 0;
+	private long lastShown = 0;
+
 
 	@Override
 	public void onInitializeClient()
@@ -89,7 +91,14 @@ public class FeaturesClient implements ClientModInitializer
 					client.setScreen(new AutoFarmScreen(null, options()));
 				}
 			}
-
+			if (System.currentTimeMillis() - lastShown > 3000) {
+				if (options().breakSafeWarning) {
+					if (!options().breakSafe) {
+						lastShown = System.currentTimeMillis();
+						client.inGameHud.addChatMessage(MessageType.GAME_INFO, new TranslatableText( "message." + MOD_ID + ".noBreakProtection"), Util.NIL_UUID);
+					}
+				}
+			}
 			if(options().autoAttackActivated)
 			{
 				countDown--;

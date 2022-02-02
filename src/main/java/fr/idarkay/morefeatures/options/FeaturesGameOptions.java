@@ -28,6 +28,7 @@ public class FeaturesGameOptions
     public double ambientFogRemover = 0.0d;
     public boolean breakSafe = true;
     public boolean breakSafeSound = true;
+    public boolean breakSafeWarning = true;
     public boolean hideFire = false;
     public boolean hideFireOnlyResistance = false;
     public boolean hidePumpkin = false;

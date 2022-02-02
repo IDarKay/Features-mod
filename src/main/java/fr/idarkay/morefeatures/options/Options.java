@@ -22,6 +22,11 @@ public abstract class Options
             options -> options.breakSafe,
             (options, aBoolean) -> options.breakSafe = aBoolean
     );
+    public static final BooleanOption BREAK_SAFE_WARNING = new BooleanOption(
+            new TranslatableText("options.more_features_id.breakSafeWarning"),
+            options -> options.breakSafeWarning,
+            (options, aBoolean) -> options.breakSafeWarning = aBoolean
+    );
     public static final BooleanOption LIGHT_SAME_ITEM = new BooleanOption(
             new TranslatableText("options.more_features_id.lightSameItem"),
             options -> options.lightSameItem,
