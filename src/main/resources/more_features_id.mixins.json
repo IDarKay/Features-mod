@@ -4,10 +4,12 @@
   "package": "fr.idarkay.morefeatures.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-
+    "KeyBoardMixin",
+    "MouseMixin"
   ],
   "client": [
     "BackgroundRendererMixin",
+    "BeaconBlockEntityRendererMixin",
     "ClientPlayerInteractionManagerMixin",
     "ClientWorldPropertiesMixin",
     "HandledScreenMixin",
@@ -15,8 +17,7 @@
     "InGameOverlayRendererMixin",
     "MinecraftClientMixin",
     "OptionMixin",
-    "OptionScreenMixin",
-    "BeaconBlockEntityRendererMixin"
+    "OptionScreenMixin"
   ],
   "injectors": {
     "defaultRequire": 1
